@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header{
+    width: 100%;
+    text-align: center;
+    font-size: 125%;
+    margin: 30px 0;
+}
+
+section{
+    background-color: gray;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    position: relative;
+    border: 1px solid black;
+}
+
+.section-title{
+    position: absolute;
+    float: right;
+    top: -1px;
+    right: -1px;
+    padding: 5px;
+    width: 200px;
+    background-color: aliceblue;
+    text-align: center;
+    border: 1px solid black;
+}
+
+section:nth-of-type(1) .section-title{
+    background-color: green;
+    color: white;
+}
+
+section:nth-of-type(2) .section-title{
+    background-color: yellow;
+}
+
+section:nth-of-type(3) .section-title{
+    background-color: red;
+    color: white;
+}
+
+article{
+    padding: 20px 10px 10px;
+}
+
+@media (max-width: 767px){
+    section {
+        width: calc(100% - 20px);
+        margin: 0 10px 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    section{
+        margin: 0 10px;
+    }
+
+    section.half-width{
+        width: calc(50% - 17px);
+        margin: 0 0 10px;
+    }
+
+    section.half-width:nth-of-type(1){
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    section.half-width:nth-of-type(2){
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    section{
+        width: calc(33.3% - 15px);
+        margin: 0 10px;
+    }
+
+    section:nth-of-type(2){
+        margin: 0;
+    }
+}
